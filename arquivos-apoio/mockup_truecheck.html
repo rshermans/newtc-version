@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrueCheck - Mockup Visual</title>
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--gray-100);
+            color: var(--gray-800);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .mockup-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--gray-900);
+        }
+        
+        .mockup-title h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        
+        .mockup-title p {
+            font-size: 1.25rem;
+            color: var(--gray-700);
+        }
+        
+        .mockup-section {
+            margin-bottom: 4rem;
+        }
+        
+        .mockup-section h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            color: var(--gray-900);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+        }
+        
+        .mockup-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .mockup-card {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .mockup-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .mockup-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .mockup-card p {
+            color: var(--gray-700);
+            margin-bottom: 1rem;
+        }
+        
+        .mockup-card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            text-align: center;
+        }
+        
+        .mockup-flow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .mockup-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 120px;
+        }
+        
+        .mockup-step-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .mockup-step-title {
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--gray-700);
+        }
+        
+        .mockup-step-line {
+            flex-grow: 1;
+            height: 2px;
+            background-color: var(--gray-300);
+            margin: 0 0.5rem;
+        }
+        
+        .mockup-interface {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .mockup-interface-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .mockup-interface-title {
+            font-size: 1.5rem;
+            color: var(--gray-900);
+        }
+        
+        .mockup-interface-content {
+            margin-bottom: 1.5rem;
+        }
+        
+        .mockup-form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .mockup-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--gray-800);
+        }
+        
+        .mockup-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--gray-300);
+            border-radius: 0.25rem;
+            font-size: 1rem;
+        }
+        
+        .mockup-button {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.25rem;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .mockup-button:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .mockup-results {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .mockup-result-card {
+            flex: 1;
+            background-color: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+        }
+        
+        .mockup-result-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: var(--gray-800);
+        }
+        
+        .mockup-score {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .mockup-score-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .mockup-score-high {
+            background-color: var(--success);
+        }
+        
+        .mockup-score-medium {
+            background-color: var(--warning);
+        }
+        
+        .mockup-score-details {
+            margin-top: 1rem;
+        }
+        
+        .mockup-score-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+        
+        .mockup-score-label {
+            color: var(--gray-700);
+        }
+        
+        .mockup-score-value {
+            font-weight: 500;
+        }
+        
+        .mockup-comparison {
+            background-color: #ebf5ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .mockup-comparison h4 {
+            color: #1e40af;
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+        
+        .mockup-comparison p {
+            color: #1e3a8a;
+            margin-bottom: 0.5rem;
+        }
+        
+        .mockup-footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-300);
+            color: var(--gray-700);
+        }
+        
+        @media (max-width: 768px) {
+            .mockup-flow {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .mockup-step-line {
+                width: 2px;
+                height: 20px;
+                margin: 0.5rem 0;
+            }
+            
+            .mockup-results {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mockup-title">
+            <h1>TrueCheck</h1>
+            <p>Verificação de Factualidade e Educação Mediática</p>
+        </div>
+        
+        <div class="mockup-section">
+            <h2>Visão Geral do Produto</h2>
+            <div class="mockup-grid">
+                <div class="mockup-card">
+                    <div class="mockup-card-icon">🔍</div>
+                    <h3>Verificação Interativa</h3>
+                    <p>Processo estruturado em 7 etapas que guia o utilizador através da verificação de factualidade de conteúdos digitais.</p>
+                </div>
+                <div class="mockup-card">
+                    <div class="mockup-card-icon">🧠</div>
+                    <h3>Educação Mediática</h3>
+                    <p>Desenvolvimento de competências de pensamento crítico através da participação ativa no processo de verificação.</p>
+                </div>
+                <div class="mockup-card">
+                    <div class="mockup-card-icon">📊</div>
+                    <h3>Análise Comparativa</h3>
+                    <p>Comparação entre a perceção do utilizador e a verificação automatizada, com visualizações interativas.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mockup-section">
+            <h2>Fluxo de Verificação</h2>
+            <div class="mockup-flow">
+                <div class="mockup-step">
+                    <div class="mockup-step-circle">1</div>
+                    <div class="mockup-step-title">Submissão de Conteúdo</div>
+                </div>
+                <div class="mockup-step-line"></div>
+                <div class="mockup-step">
+                    <div class="mockup-step-circle">2</div>
+                    <div class="mockup-step-title">Análise Preliminar</div>
+                </div>
+                <div class="mockup-step-line"></div>
+                <div class="mockup-step">
+                    <div class="mockup-step-circle">3</div>
+                    <div class="mockup-step-title">Análise de Conteúdo</div>
+                </div>
+                <div class="mockup-step-line"></div>
+                <div class="mockup-step">
+                    <div class="mockup-step-circle">4</div>
+                    <div class="mockup-step-title">Verificação Cruzada</div>
+                </div>
+                <div class="mockup-step-line"></div>
+                <div class="mockup-step">
+                    <div class="mockup-step-circle">5</div>
+                    <div class="mockup-step-title">Análise de Contexto</div>
+                </div>
+                <div class="mockup-step-line"></div>
+                <div class="mockup-step">
+                    <div class="mockup-step-circle">6</div>
+                    <div class="mockup-step-title">Avaliação Final</div>
+                </div>
+                <div class="mockup-step-line"></div>
+                <div class="mockup-step">
+                    <div class="mockup-step-circle">7</div>
+                    <div class="mockup-step-title">Resultados</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mockup-section">
+            <h2>Interface de Utilizador</h2>
+            
+            <div class="mockup-interface">
+                <div class="mockup-interface-header">
+                    <div class="mockup-interface-title">Submissão de Conteúdo</div>
+                </div>
+                <div class="mockup-interface-content">
+                    <p>Selecione o tipo de conteúdo que deseja verificar:</p>
+                    <div style="display: flex; gap: 1rem; margin: 1.5rem 0;">
+                        <button class="mockup-button" style="background-color: var(--primary);">Texto</button>
+                        <button class="mockup-button" style="background-color: var(--gray-200); color: var(--gray-800);">Link</button>
+                        <button class="mockup-button" style="background-color: var(--gray-200); color: var(--gray-800);">Imagem</button>
+                    </div>
+                    
+                    <div class="mockup-form-group">
+                        <label class="mockup-label">Insira o texto para verificação:</label>
+                        <textarea class="mockup-input" rows="5" placeholder="Cole ou digite o texto aqui..."></textarea>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <p style="font-size: 0.875rem; color: var(--gray-700);">O TrueCheck ajuda a verificar a factualidade de conteúdos e desenvolve o seu pensamento crítico.</p>
+                    <button class="mockup-button">Verificar agora</button>
+                </div>
+            </div>
+            
+            <div class="mockup-interface">
+                <div class="mockup-interface-header">
+                    <div class="mockup-interface-title">Resultados da Verificação</div>
+                </div>
+                
+                <div class="mockup-results">
+                    <div class="mockup-result-card">
+                        <h4>A Sua Avaliação</h4>
+                        <div class="mockup-score">
+                            <div class="mockup-score-circle mockup-score-medium">72</div>
+                        </div>
+                        <p style="text-align: center; font-weight: 500; margin-bottom: 1rem;">Majoritariamente factual</p>
+                        
+                        <div class="mockup-score-details">
+                            <div class="mockup-score-item">
+                                <span class="mockup-score-label">Credibilidade da fonte:</span>
+                                <span class="mockup-score-value">65/100</span>
+                            </div>
+                            <div class="mockup-score-item">
+                                <span class="mockup-score-label">Análise crítica:</span>
+                                <span class="mockup-score-value">70/100</span>
+                            </div>
+                            <div class="mockup-score-item">
+                                <span class="mockup-score-label">Avaliação contextual:</span>
+                                <span class="mockup-score-value">75/100</span>
+                            </div>
+                            <div class="mockup-score-item">
+                                <span class="mockup-score-label">Julgamento final:</span>
+                                <span class="mockup-score-value">78/100</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mockup-result-card">
+                        <h4>Verificação Automatizada</h4>
+                        <div class="mockup-score">
+                            <div class="mockup-score-circle mockup-score-high">85</div>
+                        </div>
+                        <p style="text-align: center; font-weight: 500; margin-bottom: 1rem;">Tendencialmente factual</p>
+                        
+                        <div class="mockup-score-details">
+                            <div class="mockup-score-item">
+                                <span class="mockup-score-label">Confiabilidade da fonte:</span>
+                                <span class="mockup-score-value">80/100</span>
+                            </div>
+                            <div class="mockup-score-item">
+                                <span class="mockup-score-label">Consistência factual:</span>
+                                <span class="mockup-score-value">85/100</span>
+       
+(Content truncated due to size limit. Use line ranges to read in chunks)

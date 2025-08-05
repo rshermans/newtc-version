@@ -1,0 +1,30 @@
+classDiagram
+    class Usuario {
+        +id: str
+        +nome: str
+        +email: str
+        +senha: str
+    }
+    class Verificacao {
+        +id: str
+        +url: str
+        +imagem: str
+        +resultado: str
+        +data: datetime
+    }
+    class Fonte {
+        +id: str
+        +nome: str
+        +url: str
+        +historico: list
+    }
+    class Analise {
+        +id: str
+        +verificacao_id: str
+        +fonte_id: str
+        +resultado: str
+        +detalhes: dict
+    }
+    Usuario "1" -- "*" Verificacao
+    Verificacao "1" -- "1" Analise
+    Fonte "1" -- "*" Analise

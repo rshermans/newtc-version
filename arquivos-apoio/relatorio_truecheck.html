@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório TrueCheck</title>
+    <style>
+        @page {
+            margin: 2.5cm 2cm;
+            @top-center {
+                content: "Relatório de Projeto: TrueCheck";
+                font-size: 10pt;
+                color: #666;
+            }
+            @bottom-center {
+                content: "Página " counter(page) " de " counter(pages);
+                font-size: 10pt;
+                color: #666;
+            }
+        }
+        
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            font-size: 11pt;
+        }
+        
+        h1, h2, h3, h4 {
+            color: #2563eb;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        
+        h1 {
+            font-size: 24pt;
+            text-align: center;
+            margin-top: 2cm;
+            margin-bottom: 1cm;
+            color: #1e40af;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5cm;
+        }
+        
+        h2 {
+            font-size: 16pt;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.3em;
+        }
+        
+        h3 {
+            font-size: 14pt;
+        }
+        
+        p {
+            margin-bottom: 1em;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin-bottom: 1em;
+            padding-left: 2em;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.5em;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f8fafc;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        
+        .cover {
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            page-break-after: always;
+        }
+        
+        .cover h1 {
+            font-size: 36pt;
+            margin-bottom: 0.5cm;
+            border: none;
+        }
+        
+        .cover p {
+            font-size: 16pt;
+            color: #666;
+            margin-bottom: 2cm;
+            text-align: center;
+        }
+        
+        .cover .date {
+            margin-top: 3cm;
+            font-size: 12pt;
+            color: #666;
+        }
+        
+        .section {
+            margin-bottom: 2em;
+            page-break-inside: avoid;
+        }
+        
+        .footer {
+            margin-top: 2em;
+            padding-top: 1em;
+            border-top: 1px solid #eee;
+            text-align: center;
+            font-size: 10pt;
+            color: #666;
+        }
+        
+        .page-break {
+            page-break-before: always;
+        }
+    </style>
+</head>
+<body>
+    <div class="cover">
+        <h1>TrueCheck</h1>
+        <p>Relatório de Projeto: Verificação de Factualidade e Educação Mediática</p>
+        <div class="date">27 de Maio de 2025</div>
+    </div>
+
+    <h2>Sumário Executivo</h2>
+    <p>O presente relatório visa apresentar o projeto TrueCheck, uma solução inovadora para verificação de factualidade de conteúdos digitais, com foco na educação mediática e no desenvolvimento do pensamento crítico dos utilizadores. Diferentemente de outras ferramentas de fact-checking, o TrueCheck não apenas verifica a informação, mas também envolve ativamente o utilizador no processo, promovendo uma experiência educativa que desenvolve competências essenciais para navegar no atual ecossistema de informação.</p>
+    <p>Este documento detalha os marcos alcançados, o estado atual de implementação e os próximos passos previstos para o desenvolvimento contínuo da plataforma.</p>
+
+    <h2>Visão do Produto</h2>
+    <p>O TrueCheck representa uma abordagem disruptiva à verificação de factualidade, transformando um processo tradicionalmente passivo numa jornada interativa de aprendizagem. A plataforma foi concebida para:</p>
+    <ol>
+        <li><strong>Verificar</strong> a factualidade de conteúdos digitais através de um processo estruturado e transparente</li>
+        <li><strong>Educar</strong> os utilizadores sobre métodos de verificação e pensamento crítico</li>
+        <li><strong>Comparar</strong> a perceção humana com a análise automatizada, criando momentos de reflexão</li>
+        <li><strong>Desenvolver</strong> competências de literacia mediática aplicáveis além da plataforma</li>
+    </ol>
+    <p>A nossa visão é criar uma sociedade mais resiliente à desinformação, não apenas através de ferramentas tecnológicas, mas principalmente através da capacitação dos cidadãos.</p>
+
+    <h2>Estado Atual de Implementação</h2>
+    <p>O TrueCheck encontra-se atualmente implementado como uma aplicação web funcional, acessível através do endereço <a href="https://avsncidr.manus.space">https://avsncidr.manus.space</a>. A plataforma inclui:</p>
+    <ol>
+        <li><strong>Interface completa</strong> para o fluxo de verificação em 7 etapas</li>
+        <li><strong>Sistema de pontuação</strong> para análise comparativa entre utilizador e IA</li>
+        <li><strong>Visualizações interativas</strong> para representação de scores e discrepâncias</li>
+        <li><strong>Suporte multilingue</strong> com alternância entre português e inglês</li>
+    </ol>
+    <p>A implementação atual representa a concretização da visão inicial do produto, com uma interface intuitiva e responsiva que funciona em dispositivos móveis e desktop.</p>
+
+    <div class="page-break"></div>
+    <h2>Marcos Alcançados</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Marco</th>
+                <th>Descrição</th>
+                <th>Data de Conclusão</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Definição do Fluxo</td>
+                <td>Estruturação do processo de verificação em 7 etapas</td>
+                <td>20/05/2025</td>
+            </tr>
+            <tr>
+                <td>Modelo de Score</td>
+                <td>Desenvolvimento do sistema de pontuação e comparação</td>
+                <td>20/05/2025</td>
+            </tr>
+            <tr>
+                <td>Implementação Web</td>
+                <td>Criação da aplicação web com React e TypeScript</td>
+                <td>20/05/2025</td>
+            </tr>
+            <tr>
+                <td>Implantação</td>
+                <td>Publicação da aplicação em ambiente de produção</td>
+                <td>20/05/2025</td>
+            </tr>
+            <tr>
+                <td>Internacionalização</td>
+                <td>Implementação do suporte multilingue (PT/EN)</td>
+                <td>27/05/2025</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Metodologia Educativa</h2>
+    <p>O diferencial do TrueCheck reside na sua abordagem educativa, que se manifesta em vários aspetos:</p>
+
+    <h3>Processo Estruturado em Etapas</h3>
+    <p>O utilizador é guiado através de um processo de verificação em 7 etapas:</p>
+    <ol>
+        <li>Submissão de Conteúdo</li>
+        <li>Análise Preliminar</li>
+        <li>Análise de Conteúdo</li>
+        <li>Verificação Cruzada</li>
+        <li>Análise de Contexto</li>
+        <li>Avaliação Final</li>
+        <li>Resultados Comparativos</li>
+    </ol>
+
+    <h3>Participação Ativa</h3>
+    <p>Em cada etapa, o utilizador é convidado a:</p>
+    <ul>
+        <li>Responder a perguntas sobre o conteúdo</li>
+        <li>Avaliar elementos específicos da informação</li>
+        <li>Formar juízos baseados em evidências</li>
+        <li>Comparar a sua análise com a verificação automatizada</li>
+    </ul>
+
+    <h3>Feedback Educativo</h3>
+    <p>Após a conclusão do processo, o utilizador recebe:</p>
+    <ul>
+        <li>Comparação visual entre a sua avaliação e a da IA</li>
+        <li>Análise de discrepâncias com explicações contextuais</li>
+        <li>Aprendizagens principais sobre verificação de factos</li>
+        <li>Recursos adicionais para aprofundar conhecimentos</li>
+    </ul>
+
+    <div class="page-break"></div>
+    <h2>Próximos Passos e Cronograma</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Fase</th>
+                <th>Descrição</th>
+                <th>Prazo Estimado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Expansão de Idiomas</td>
+                <td>Adicionar suporte para espanhol e francês</td>
+                <td>Q3 2025</td>
+            </tr>
+            <tr>
+                <td>Integração de API</td>
+                <td>Conectar com bases de dados de fact-checking</td>
+                <td>Q3 2025</td>
+            </tr>
+            <tr>
+                <td>Funcionalidades Sociais</td>
+                <td>Implementar partilha e discussão de verificações</td>
+                <td>Q4 2025</td>
+            </tr>
+            <tr>
+                <td>Aplicação Móvel</td>
+                <td>Desenvolver versões nativas para iOS e Android</td>
+                <td>Q1 2026</td>
+            </tr>
+            <tr>
+                <td>Análise de Imagens</td>
+                <td>Adicionar verificação de imagens com IA</td>
+                <td>Q2 2026</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Milestones Críticos para 2025-2026</h3>
+    <ol>
+        <li>
+            <strong>Lançamento da Versão 2.0</strong> (Q4 2025)
+            <ul>
+                <li>Suporte para 4 idiomas</li>
+                <li>Integração com bases de dados externas</li>
+                <li>Funcionalidades de comunidade</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Expansão para Dispositivos Móveis</strong> (Q1 2026)
+            <ul>
+                <li>Aplicações nativas para iOS e Android</li>
+                <li>Funcionalidades offline</li>
+                <li>Notificações para tópicos de interesse</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Implementação de Análise Multimodal</strong> (Q2 2026)
+            <ul>
+                <li>Verificação de imagens e vídeos</li>
+                <li>Deteção de deepfakes</li>
+                <li>Análise de manipulação de média</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>Métricas de Sucesso</h2>
+    <p>O sucesso do TrueCheck será avaliado através das seguintes métricas:</p>
+
+    <h3>1. Engagement dos Utilizadores</h3>
+    <ul>
+        <li>Tempo médio na plataforma</li>
+        <li>Taxa de conclusão do processo de verificação</li>
+        <li>Número de verificações por utilizador</li>
+    </ul>
+
+    <h3>2. Impacto Educativo</h3>
+    <ul>
+        <li>Redução da discrepância entre avaliações do utilizador e da IA ao longo do tempo</li>
+        <li>Melhoria na identificação de elementos problemáticos</li>
+        <li>Feedback qualitativo dos utilizadores</li>
+    </ul>
+
+    <h3>3. Crescimento</h3>
+    <ul>
+        <li>Número de utilizadores ativos mensais</li>
+        <li>Taxa de retenção</li>
+        <li>Alcance geográfico e demográfico</li>
+    </ul>
+
+    <div class="page-break"></div>
+    <h2>Considerações Finais</h2>
+    <p>O TrueCheck representa uma abordagem inovadora para combater a desinformação, focando não apenas na tecnologia, mas principalmente no desenvolvimento humano. Ao transformar a verificação de factos numa experiência educativa, criamos uma solução sustentável que capacita os cidadãos a navegar no complexo ecossistema de informação atual.</p>
+    <p>A implementação atual demonstra a viabilidade do conceito e estabelece uma base sólida para as expansões futuras. Com o cronograma estabelecido, prevemos que o TrueCheck se torne uma ferramenta essencial para instituições educativas, organizações mediáticas e cidadãos comuns nos próximos anos.</p>
+
+    <div class="footer">
+        <p><strong>Elaborado por:</strong> Equipa de Produto TrueCheck<br>
+        <strong>Data:</strong> 27 de Maio de 2025</p>
+    </div>
+</body>
+</html>

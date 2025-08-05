@@ -1,0 +1,14 @@
+sequenceDiagram
+    participant U as Usuario
+    participant F as Frontend
+    participant B as Backend
+    participant BD as BancoDeDados
+    participant A as APIExterna
+    U->>F: Insere link ou imagem
+    F->>B: Envia dados para verificação
+    B->>A: Consulta API externa
+    A-->>B: Retorna dados da consulta
+    B->>BD: Armazena resultado da verificação
+    BD-->>B: Confirma armazenamento
+    B-->>F: Retorna resultado da verificação
+    F-->>U: Exibe resultado

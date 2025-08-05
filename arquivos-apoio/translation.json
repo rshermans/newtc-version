@@ -1,0 +1,225 @@
+{
+  "app": {
+    "title": "TrueCheck",
+    "subtitle": "Factuality Verification",
+    "footer": "TrueCheck © 2025 - Fighting misinformation and promoting media literacy"
+  },
+  "navigation": {
+    "about": "About",
+    "resources": "Resources",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "steps": {
+    "step1": "Content Submission",
+    "step2": "Preliminary Analysis",
+    "step3": "Content Analysis",
+    "step4": "Cross Verification",
+    "step5": "Context Analysis",
+    "step6": "Final Evaluation",
+    "step7": "Results"
+  },
+  "contentSubmission": {
+    "title": "Factuality Verification",
+    "selectType": "Select the type of content you want to verify:",
+    "typeText": "Text",
+    "typeLink": "Link",
+    "typeImage": "Image",
+    "textLabel": "Enter the text for verification:",
+    "linkLabel": "Enter the link for verification:",
+    "imageLabel": "Enter the image URL for verification:",
+    "textPlaceholder": "Paste or type your text here...",
+    "linkPlaceholder": "https://example.com/news",
+    "imagePlaceholder": "https://example.com/image.jpg",
+    "errorRequired": "Please enter the content for verification",
+    "errorTypeRequired": "Please select a content type",
+    "errorInvalidLink": "Please enter a valid link starting with http:// or https://",
+    "helpText": "TrueCheck helps verify the factuality of content and develops your critical thinking.",
+    "submitButton": "Verify now"
+  },
+  "preliminaryAnalysis": {
+    "title": "Preliminary Analysis",
+    "contentType": "Content type",
+    "analyzedContent": "Analyzed content",
+    "verifying": "Verifying...",
+    "analyzingSource": "Analyzing source and metadata",
+    "checkingConsistency": "Checking factual consistency",
+    "evaluatingContext": "Evaluating context and propagation",
+    "helpText1": "The preliminary analysis checks the source, metadata, and initial context of the content.",
+    "helpText2": "This process is automatic and takes only a few seconds."
+  },
+  "contentAnalysis": {
+    "title": "Content Analysis",
+    "loading": "Analyzing content in detail...",
+    "analyzedContent": "Analyzed content:",
+    "identifiedElements": "Identified elements:",
+    "verifiableClaim": "Verifiable claim",
+    "citedSource": "Cited source",
+    "opinion": "Opinion",
+    "helpText1": "Content analysis identifies verifiable claims, cited sources, and opinion elements.",
+    "helpText2": "This step helps separate facts from interpretations and opinions."
+  },
+  "crossVerification": {
+    "title": "Cross Verification",
+    "loading": "Searching for alternative sources...",
+    "alternativeSources": "Alternative sources found:",
+    "published": "Published:",
+    "reliability": "Reliability:",
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low",
+    "agreementAnalysis": "Agreement analysis:",
+    "lowAgreement": "Low agreement",
+    "highAgreement": "High agreement",
+    "helpText1": "Cross verification compares the content with other reliable sources on the same topic.",
+    "helpText2": "A high level of agreement between independent sources increases the reliability of the information."
+  },
+  "contextAnalysis": {
+    "title": "Context Analysis",
+    "loading": "Analyzing historical and current context...",
+    "historicalContext": "Historical context:",
+    "relevantFactors": "Relevant contextual factors:",
+    "regulatoryChanges": "Regulatory changes",
+    "economicEvents": "Economic events",
+    "measurementMethodology": "Measurement methodology",
+    "helpText1": "Context analysis examines the history and factors that influence the interpretation of information.",
+    "helpText2": "Understanding context is essential for properly assessing the factuality of content."
+  },
+  "finalEvaluation": {
+    "title": "Final Evaluation",
+    "analysisSum": "Analysis summary:",
+    "sourceMetadata": "Source and Metadata",
+    "factualConsistency": "Factual Consistency",
+    "context": "Context",
+    "languageElements": "Language Elements",
+    "sourceReliability": "The source has a moderate to high reliability history, with adequate editorial transparency.",
+    "claimsConsistency": "The main claims are verifiable and show good agreement with other reliable sources.",
+    "contextPresentation": "The historical and current context is presented adequately, allowing comprehensive understanding.",
+    "languageBias": "Presence of some biased language elements, but reasonable separation between facts and opinions.",
+    "helpText1": "The final evaluation integrates all aspects analyzed in the previous steps.",
+    "helpText2": "Your perception will be compared with the automated verification to promote critical reflection."
+  },
+  "results": {
+    "title": "Verification Results",
+    "loading": "Calculating final results...",
+    "comparisonTitle": "Evaluation Comparison:",
+    "yourEvaluation": "Your Evaluation",
+    "automatedVerification": "Automated Verification",
+    "sourceCredibility": "Source credibility:",
+    "criticalAnalysis": "Critical analysis:",
+    "contextualEvaluation": "Contextual evaluation:",
+    "finalJudgment": "Final judgment:",
+    "sourceReliability": "Source reliability:",
+    "factualConsistency": "Factual consistency:",
+    "contentQuality": "Content quality:",
+    "technicalIntegrity": "Technical integrity:",
+    "discrepancyAnalysis": "Discrepancy Analysis",
+    "difference": "Difference:",
+    "points": "points",
+    "learningTitle": "Key Learnings:",
+    "sourceVerification": "Source verification",
+    "sourceVerificationTip": "Always check the credibility of the source before accepting its claims.",
+    "crossCheck": "Cross verification",
+    "crossCheckTip": "Compare information with other reliable sources to confirm its accuracy.",
+    "fullContext": "Complete context",
+    "fullContextTip": "Consider the historical and current context to properly understand the information.",
+    "factOpinionSeparation": "Separation between fact and opinion",
+    "factOpinionSeparationTip": "Clearly identify what is factual information and what is interpretation or opinion.",
+    "newVerification": "Start New Verification",
+    "additionalResources": "Additional Resources:",
+    "factCheckGuide": "Fact-Checking Guide",
+    "factCheckGuideDesc": "Learn advanced techniques for verifying the factuality of online content.",
+    "accessGuide": "Access guide",
+    "verificationTools": "Verification Tools",
+    "verificationToolsDesc": "Discover free tools that can help with information verification.",
+    "viewTools": "View tools",
+    "mediaLiteracyCourse": "Media Literacy Course",
+    "mediaLiteracyCourseDesc": "Develop critical skills to consume information consciously.",
+    "exploreCourse": "Explore course",
+    "factCheckersCommunity": "Fact-Checkers Community",
+    "factCheckersCommunityDesc": "Connect with other people interested in fighting misinformation.",
+    "joinCommunity": "Join"
+  },
+  "questionnaire": {
+    "question": "Question",
+    "of": "of",
+    "nextQuestion": "Next question",
+    "lowDisagree": "Strongly disagree",
+    "highAgree": "Strongly agree",
+    "low": "Low",
+    "high": "High",
+    "textPlaceholder": "Type your answer here..."
+  },
+  "factualityRanges": {
+    "nonFactual": "Non-factual",
+    "barelyFactual": "Barely factual",
+    "partiallyFactual": "Partially factual",
+    "mostlyFactual": "Mostly factual",
+    "tendentiallyFactual": "Tendentially factual"
+  },
+  "interactiveComparison": {
+    "title": "Interactive Score Visualization",
+    "comparativeAnalysis": "Comparative Analysis:",
+    "scoreComparison": "Score Comparison:",
+    "yourEvaluation": "Your evaluation",
+    "aiVerification": "AI verification",
+    "factualityThermometer": "Factuality Thermometer:",
+    "educativeInterpretation": "Educative Interpretation",
+    "tip": "Tip:",
+    "tipText": "Observe the areas where your assessment differs most from the automated verification. These are opportunities to develop your critical thinking.",
+    "reflection": "Reflection:",
+    "reflectionText": "Consider what factors may have influenced your perception, such as personal experiences, prior knowledge, or confirmation bias."
+  },
+  "questions": {
+    "reliableSources": "Which elements of this content seem most reliable?",
+    "contentTone": "What is the predominant tone of the content?",
+    "verifiableClaims": "Can you identify claims that can be factually verified?",
+    "consistencyEvaluation": "Based on the alternative sources presented, how do you evaluate the consistency of the information?",
+    "sourcesRelevance": "Are the cited sources relevant to the topic?",
+    "precisionEvaluation": "Based on the presented context, how do you evaluate the accuracy of the information?",
+    "biasPerspective": "Do you perceive any bias in how the information is presented?",
+    "contextImpact": "Does this context change your initial perception of the content?",
+    "finalFactuality": "After the analysis, how would you classify the factuality of this content?",
+    "opinionChange": "Did your opinion change during the verification process?",
+    "importantCriteria": "Which criterion do you consider most important for determining factuality?"
+  },
+  "options": {
+    "verifiableClaims": {
+      "many": "Yes, several verifiable claims",
+      "some": "Some verifiable claims",
+      "few": "Few verifiable claims",
+      "none": "No verifiable claims"
+    },
+    "sourcesRelevance": {
+      "veryRelevant": "Very relevant",
+      "relevant": "Relevant",
+      "barelyRelevant": "Barely relevant",
+      "irrelevant": "Irrelevant"
+    },
+    "biasPerspective": {
+      "noBias": "I don't perceive bias",
+      "slightBias": "I perceive slight bias",
+      "moderateBias": "I perceive moderate bias",
+      "strongBias": "I perceive strong bias"
+    },
+    "contextImpact": {
+      "significantChange": "Yes, significantly",
+      "moderateChange": "Yes, moderately",
+      "slightChange": "Yes, slightly",
+      "noChange": "No, I maintained my initial perception"
+    },
+    "opinionChange": {
+      "significantChange": "Yes, significantly",
+      "moderateChange": "Yes, moderately",
+      "slightChange": "Yes, slightly",
+      "noChange": "No, I maintained my initial opinion"
+    },
+    "importantCriteria": {
+      "sourceReliability": "Source reliability",
+      "crossVerification": "Consistency between different sources",
+      "evidenceQuality": "Quality of evidence presented",
+      "context": "Historical and current context",
+      "factOpinionSeparation": "Separation between fact and opinion"
+    }
+  }
+}
