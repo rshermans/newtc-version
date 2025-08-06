@@ -1,35 +1,73 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import './App.css';
+import { TrueCheckProvider } from './context/TrueCheckContext';
+import { useTrueCheck } from './hooks/useTrueCheck'; // Updated import
+import { ProgressStepper } from './components/ProgressStepper';
+import { ContentSubmission } from './components/ContentSubmission';
+import { PreliminaryAnalysis } from './components/PreliminaryAnalysis';
+import { ContentAnalysis } from './components/ContentAnalysis';
+import { CrossVerification } from './components/CrossVerification';
+import { ContextAnalysis } from './components/ContextAnalysis';
+import { FinalEvaluation } from './components/FinalEvaluation';
+import { Results } from './components/Results';
+import { InteractiveScoreComparison } from './components/InteractiveScoreComparison';
+import { HomePage } from './components/HomePage';
+
+const TrueCheckApp = () => {
+  const { isVerificationStarted, currentStep } = useTrueCheck();
+
+  if (!isVerificationStarted) {
+    return <HomePage />;
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="min-h-screen bg-gray-100 py-8">
+      <header className="max-w-4xl mx-auto px-4 mb-8">
+        <div className="flex justify-center mb-6">
+          <h1 className="text-3xl font-bold text-blue-600">TrueCheck</h1>
+        </div>
+        
+        <ProgressStepper />
+      </header>
+      
+      <main className="max-w-4xl mx-auto px-4 pb-12">
+        {currentStep === 1 && <ContentSubmission />}
+        {currentStep === 2 && <PreliminaryAnalysis />}
+        {currentStep === 3 && <ContentAnalysis />}
+        {currentStep === 4 && <CrossVerification />}
+        {currentStep === 5 && <ContextAnalysis />}
+        {currentStep === 6 && <FinalEvaluation />}
+        {currentStep === 7 && (
+          <>
+            <Results />
+            <InteractiveScoreComparison />
+          </>
+        )}
+      </main>
+      
+      <footer className="max-w-4xl mx-auto px-4 py-6 border-t border-gray-200">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <p className="text-sm text-gray-500 mb-4 md:mb-0">
+            TrueCheck © 2024 - Combatendo a desinformação e promovendo a educação midiática
+          </p>
+          
+          <div className="flex space-x-4">
+            <a href="#" className="text-sm text-blue-600 hover:underline">Sobre</a>
+            <a href="#" className="text-sm text-blue-600 hover:underline">Recursos</a>
+            <a href="#" className="text-sm text-blue-600 hover:underline">Contato</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+function App() {
+  return (
+    <TrueCheckProvider>
+      <TrueCheckApp />
+    </TrueCheckProvider>
+  );
 }
 
-export default App
+export default App;
